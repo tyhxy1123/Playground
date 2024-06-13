@@ -1,0 +1,5 @@
+package de.dresden.springdemo.mvc;
+
+public class SetPosition {
+
+}

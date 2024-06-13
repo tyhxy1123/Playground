@@ -1,0 +1,28 @@
+package callback;
+
+public class PaintFrame {
+
+	public void drawFrame(MyFrame f) {
+		System.out.println("启动线程");
+		System.out.println("增加循环");
+		System.out.println("查看消息栈");
+		
+		//画窗口
+		f.paint();
+		
+		System.out.println("启动缓存，增加效率");
+
+	}
+	
+	public static void main(String[] args) {
+		drawFrame();
+	}
+}
+
+class GameFrame01 extends MyFrame{
+	@Override
+	public void paint() {
+		System.out.println("把自己画出来");
+
+	}
+}

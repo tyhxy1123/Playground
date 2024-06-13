@@ -1,0 +1,70 @@
+package de.tu_dresden.myCollection;
+
+import java.util.ArrayList;
+
+/**
+ * 模拟实现JDK中的ArrayList类
+ * 
+ * @author xiangyu
+ *
+ */
+public class MyArrayList {
+
+	Object[] value;
+
+	int size;
+
+	public MyArrayList() {
+		this(16);
+	}
+
+	public MyArrayList(int count) {
+		value = new Object[count];
+	}
+
+	private Object[] expand(Object[] toExpand) {
+		Object[] tmp = new Object[value.length * 2 + 2];
+		for (int i = 0; i < size; i++) {
+			tmp[i] = toExpand[i];
+		}
+		return tmp;
+	}
+
+	public int length() {
+		return size;
+	}
+	
+	public void append(Object obj) {
+
+		if (value.length <= size) {
+			value = expand(value);
+		}
+
+		value[size] = obj;
+		size++;
+	}
+
+	public Object get(int index) {
+		if (index < 0 || index >= size) {
+			try {
+				throw new IllegalAccessError();
+			} catch (IllegalAccessError e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return value[index];
+	}
+
+	public static void main(String[] args) {
+		MyArrayList list = new MyArrayList(1);
+		list.append("sldkfjdsklfj");
+		list.append("sdfsdf");
+		list.append("ss");
+		System.out.println(list.length());
+		for(int i = 0; i < list.length(); i++) {
+			System.out.println(list.get(i));
+			
+		}
+	}
+}

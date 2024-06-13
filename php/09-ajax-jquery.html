@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09-ajax-jquery</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(()=>{
+            $("button").on("click", () => {
+                $.ajax({
+                    type:'get',
+                    data:{
+                        'userName':"jjj",
+                        'userPass':"1234"
+                    },
+                    url:'09-ajax-jquery.php',
+                    success:(data)=>{alert(data.split("|"))},
+                    error:(xhr)=>{alert(xhr.status)}
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <button>submit</button>
+    </div>
+</body>
+
+</html>

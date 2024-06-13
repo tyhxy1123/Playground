@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>add student form</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<form action="#" th:action="@{/detail}" th:object="${student}" method="post">
+
+    <input name="name" type="text" placeholder="name" th:field="*{name}"/>
+    <br/>
+
+    <input name="age" type="text" placeholder="age" th:field="*{age}"/>
+    <br/>
+    <input type="submit" value="提交"/>
+</form>
+
+<a href="/reach" th:action="@{/reach}" method="get" >Reach</a>
+
+</body>
+</html>

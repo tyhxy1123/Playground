@@ -1,0 +1,11 @@
+/Users/xiangyu/Projects/Tmp/App/bin/Debug/netcoreapp3.1/App
+/Users/xiangyu/Projects/Tmp/App/bin/Debug/netcoreapp3.1/App.deps.json
+/Users/xiangyu/Projects/Tmp/App/bin/Debug/netcoreapp3.1/App.runtimeconfig.json
+/Users/xiangyu/Projects/Tmp/App/bin/Debug/netcoreapp3.1/App.runtimeconfig.dev.json
+/Users/xiangyu/Projects/Tmp/App/bin/Debug/netcoreapp3.1/App.dll
+/Users/xiangyu/Projects/Tmp/App/bin/Debug/netcoreapp3.1/App.pdb
+/Users/xiangyu/Projects/Tmp/App/obj/Debug/netcoreapp3.1/App.csprojAssemblyReference.cache
+/Users/xiangyu/Projects/Tmp/App/obj/Debug/netcoreapp3.1/App.AssemblyInfoInputs.cache
+/Users/xiangyu/Projects/Tmp/App/obj/Debug/netcoreapp3.1/App.AssemblyInfo.cs
+/Users/xiangyu/Projects/Tmp/App/obj/Debug/netcoreapp3.1/App.dll
+/Users/xiangyu/Projects/Tmp/App/obj/Debug/netcoreapp3.1/App.pdb

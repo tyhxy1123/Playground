@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xiangyu/Projects/Playground/CPP/Demo/Node.cpp
+iostream
+-
+Node.h
+/Users/xiangyu/Projects/Playground/CPP/Demo/Node.h
+
+/Users/xiangyu/Projects/Playground/CPP/Demo/Node.h
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>27-jQuery-EventAutoActive</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background:blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            $(".father").click(()=>{
+                console.log("father");
+                
+            })
+            // $(".father").trigger("click")
+            // $(".father").triggerHandler("click")
+            // Difference of trigger and triggerHandler
+            /*
+                1. 如果用trigger会触发事件冒泡
+                triggerHandler不会触发事件冒泡
+
+                2. trigger 会触发默认行为, 但是a标签不受影响，想触发a标签需要用span子标签
+                triggerHandler不会触发默认行为
+            */
+
+            $("input[type='submit']").click(()=>{alert("submit")})
+            $("input[type='submit']").triggerHandler("click")
+        })
+        
+    </script>
+    
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+    <a href="http://www.baidu.com"><span>注册</span></a>
+    <form action="http://www.taobao.com">
+        <input type="text">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

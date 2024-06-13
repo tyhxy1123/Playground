@@ -1,0 +1,14 @@
+package de.tu_dresden.stringbuilder;
+
+
+/**
+ * 测试可变字符序列 StringBuilder, StringBuffer
+ * @author xiangyu
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		StringBuilder sb = new StringBuilder();
+		
+	}
+}

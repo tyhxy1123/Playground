@@ -1,0 +1,35 @@
+@model Student
+
+@{
+    //    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "学生详情页";
+}
+
+@*     @{ *@
+@*         var student = ViewData["Student"] as Student; *@
+@*     } *@
+<div class="row justify-content-center m-3">
+    @{ var student = Model; }
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>@student.Name</h3>
+            </div>
+            <div class="card-body text-center">
+                <img class="card-img-top" asp-append-version="true" src="~/imgs/02.jpg"/>
+                <h4>学生ID: @student.Id</h4>
+                <h4>邮箱: @student.Email</h4>
+                <h4>班级: @student.ClassName</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">返回</a>
+                <a href="#" class="btn btn-primary">编辑</a>
+                <a href="#" class="btn btn-danger">删除</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* @section Scripts{ *@
+@*     <script src="js/CustomerScript.js"></script> *@
+@* } *@

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24-JQuery-EventBinding</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            // in JQuery there are two kinds of event bindings
+            
+            
+            // 1. eventName(fn) 编码效率较高，有提示，但部分事件jQuery没有实现
+            // 可以添加相同或不同的多个事件，不会被覆盖
+            // $("button").click(()=>{alert("こんにちわ")})
+            // $("button").click(() => { alert("できますか？") })
+            $("button").mouseleave(()=>{
+                alert("可愛ですね")
+            })
+            $("button").mouseenter(()=>{
+                alert("始めます")
+            })
+            // 2. on(eventName, fn) 编码效率较低，没有提示，所有JS事件都可以添加
+            // 可以添加相同或不同的多个事件，不会被覆盖
+            // $("button").on("click", () => { alert("良し") })
+
+            let test1=()=>{alert("test1")}
+            let test2=()=>{alert("test2")}
+            $("button").click(test1).click(test2)
+            
+            // 移除所有事件
+            // $("button").off()
+            
+            // 移除单个事件
+            // $("button").off("click")
+
+            // 移除指定事件
+            $("button").off("click", test1)
+
+
+
+        })
+    </script>
+</head>
+<body>
+    <button>僕はButtonです</button>
+</body>
+</html>

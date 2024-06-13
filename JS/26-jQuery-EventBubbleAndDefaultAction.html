@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>26-jQuery-EventBubbleAndDefaultAction</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background:blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            // 事件冒泡： 事件从底层往顶层连续发生的现象
+            $(".father").click(() => { console.log("father"); })
+            // 方法1: 函数 return false 阻止冒泡
+            // $(".son").click(() => { 
+                // console.log("son"); 
+                // son 返回 false 阻止了事件冒泡
+                // return false; })
+
+            // 方法2: 在回调函数中使用event.stopPropagation()
+            // $(".son").click((event)=>{console.log("son2"); event.stopPropagation()})
+
+            // 同样的方法可以阻止默认行为: 标签跳转
+            $("a").click((event)=>{
+                console.log("弹出注册框");
+                event.preventDefault();
+            })
+        })
+        
+    </script>
+    
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+    <a href="http://www.baidu.com">注册</a>
+    <form action="http://www.taobao.com">
+        <input type="text">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

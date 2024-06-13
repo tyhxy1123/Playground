@@ -1,0 +1,12 @@
+package de.dresden.springdemo.mvc.controller;
+
+@Component
+@RequestMapping("/student")
+public class StudentController {
+	
+	public String showForm(@RequestParam()Model model) {
+		
+		
+		return "student-form";
+	}
+}

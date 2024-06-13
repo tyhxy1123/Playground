@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-JQuery-contentSelector</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <style>
+    div {
+        width: 50px;
+        height: 50px;
+        background: red;
+        margin-top: 5px;
+    }
+    </style>
+    <script>
+    $(function() {
+        // 即没有文本内容又没有子元素的指定元素
+        // var $div = $("div:empty")
+        // console.log($div);    
+
+        // console.log($("div:parent"));
+
+        // console.log($("div:contains('I am div')"));
+
+        console.log($("div:has('span')"));
+    })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <div>I am div first</div>
+    <div>I am div second</div>
+    <div><span></span></div>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

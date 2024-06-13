@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+    <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet"
+                factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554148492547_3" label="Java Main Sources"
+                name="Java Main Sources">
+        <item elementID="=PlaneGame0.7/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+        <item elementID="=PlaneGame0.8/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+        <item elementID="=demo/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+        <item elementID="=demo/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+        <item elementID="=testjava/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+    </workingSet>
+    <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet"
+                factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554148492553_4" label="Java Test Sources"
+                name="Java Test Sources">
+        <item elementID="=demo/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+    </workingSet>
+    <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1553874279996_2"
+                label="Window Working Set" name="Aggregate for window 1553874279995"/>
+</workingSetManager>

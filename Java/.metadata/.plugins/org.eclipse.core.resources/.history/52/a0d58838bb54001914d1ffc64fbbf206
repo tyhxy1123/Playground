@@ -1,0 +1,5 @@
+package de.tu_dresden.bean;
+
+public class Dog {
+
+}

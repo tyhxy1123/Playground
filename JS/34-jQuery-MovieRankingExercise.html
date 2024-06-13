@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>34-jQuery-MovieRankingExercise</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 300px;
+            height: 450px;
+            margin: 50px auto;
+            border: 1px solid #000;
+        }
+        .box>h1{
+            font-size: 20px;
+            line-height: 35px;
+            color: deeppink;
+            padding-left: 10px;
+            border-bottom: 1px dashed #ccc;
+        }
+        ul>li{
+            list-style: none;
+            padding: 5px 10px;
+            border: 1px dashed #ccc;
+        }
+        ul>li:nth-child(-n+3) span{
+            background: deeppink;
+        }
+        ul>li>span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+        .content{
+            overflow: hidden;
+            margin-top: 5px;
+            display: none;
+        }
+        .content>img{
+            width: 80px;
+            height: 120px;
+            float: left;
+        }
+        .content>p{
+            width: 180px;
+            height: 120px;
+            float: right;
+            line-height: 20px;
+        }
+        .current .content{
+            display: block;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            // $("li").mouseenter(function(){
+            //     $(this).addClass("current")
+            // })
+            // $("li").mouseleave(function(){
+            //     $(this).removeClass("current")
+            // })
+
+            $("li").hover(function(){$(this).addClass("current")},function(){$(this).removeClass("current")})
+        })
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h1>Movie Ranking</h1>
+        <ul>
+            <li><span>1</span>Movie
+                <div class="content">
+                    <img src="images/login.jpg" alt="">
+                    <p>我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介我是简介</p>
+                </div>
+            </li>
+            <li><span>2</span>Movie</li>
+            <li><span>3</span>Movie</li>
+            <li><span>4</span>Movie</li>
+            <li><span>5</span>Movie</li>
+            <li><span>6</span>Movie</li>
+            <li><span>7</span>Movie</li>
+        </ul>
+    </div>
+</body>
+</html>

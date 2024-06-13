@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>33-jQuery-移入移出事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background:blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            // $(".father").mouseover(()=>{
+            //     console.log("father 被移入了")
+            // });
+            // $(".father").mouseout(()=>{
+            //     console.log("father 被移出了");
+            // })
+
+            // $(".father").mouseenter(() => {
+            //     console.log("father 被移入了")
+            // });
+            // $(".father").mouseleave(() => {
+            //     console.log("father 被移出了");
+            // })
+
+            // $(".father").hover(()=>{
+            //     console.log("father 被移入了")
+            // },()=>{
+            //     console.log("father 被移出了")
+            // })
+
+            $(".father").hover(()=>{
+                console.log("father 被移入移出了")
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+</body>
+</html>

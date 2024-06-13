@@ -1,0 +1,14 @@
+package de.dresden.springdemo.mvc.controller;
+
+import org.springframework.ui.Model;
+
+@Component
+@RequestMapping("/student")
+public class StudentController {
+	
+	public String showForm(Model model) {
+		model.addAttribute("student", new Student())
+		
+		return "student-form";
+	}
+}

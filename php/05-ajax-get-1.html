@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload=function(ev){
+            var btn = document.querySelector("button");
+            btn.onclick = function(ev1){
+                var xml = new XMLHttpRequest();
+                xml.open("GET", "05-ajax-get.php");
+                xml.send();
+                xml.onreadystatechange = function(){
+                    console.log("success");
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <button>send</button>
+</body>
+</html>

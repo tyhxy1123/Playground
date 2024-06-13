@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-ajax-post</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="ajax.js"></script>
+    <script>
+        $(() => {
+            $("button").on("click", () => {
+                // var obj = {
+                //     "userName": "name",
+                //     "userPass": "pwd"
+                // }
+                // obj.t = new Date().getTime();
+                // ajax("GET", "08-ajax-post.php", obj, 3000, function (data) {
+                //     alert(data.responseText);
+                // }, function (data) {
+                //     alert(data.responseText);
+                // });
+                ajax("POST", "08-ajax-post.php", {"userName":"sdlkfj","userPass":"231898742938"}, 3000, function(xhr){alert(xhr.responseText)},function(xhr){alert("fail")});
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button>submit</button>
+    </div>
+</body>
+</html>

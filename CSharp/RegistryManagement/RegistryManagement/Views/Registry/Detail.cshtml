@@ -1,0 +1,18 @@
+@model User
+
+<div>
+    <table class="table-info">
+        <thead class="thead-dark">
+        <tr class="text-lg-left row">
+            <th class="col" asp-for="Id"></th>
+            <th class="col" asp-for="Email"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="col">@Model.Id</td>
+            <td class="col">@Model.Email</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

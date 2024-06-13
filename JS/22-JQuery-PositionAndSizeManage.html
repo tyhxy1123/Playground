@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22-JQuery-PositionAndSizeManage</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+            border: 50px solid #000;
+            margin-left: 50px;
+            position: relative;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            var btns = $("button")
+            // listen get
+            btns[0].onclick=()=>{
+                // console.log($(".father").width());
+                // console.log($(".son").offset().left);
+                console.log($(".son").position().left);
+                
+            }
+            // listen get
+            btns[1].onclick=()=>{
+                // $(".father").width("500px")
+                // $(".son").offset({
+                //     left:10
+                // })
+                // position() 只能取出不能设置，设置还得用css()
+                $(".son").css({
+                    left:10
+                })
+            }
+        })
+    </script>
+    </head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <button>get</button>
+    <button>set</button>
+</body>
+</html>

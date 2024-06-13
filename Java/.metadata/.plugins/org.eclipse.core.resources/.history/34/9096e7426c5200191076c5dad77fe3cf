@@ -1,0 +1,31 @@
+package de.tu_dresden.stringbuilder;
+
+
+/**
+ * String 不可变字符序列
+ * 测试可变字符序列 StringBuilder(线程不安全，效率高), StringBuffer(线程安全，效率低)
+ * @author xiangyu
+ *
+ */
+public class Test01 {
+	
+	public static void main(String[] args) {
+		
+		StringBuilder sb = new StringBuilder(); //长度为16的字符数组
+		StringBuilder sb1 = new StringBuilder(32); //长度为32的字符数组
+		StringBuilder sb2 = new StringBuilder("a"); //长度为17的字符数组,{'a', \u0000, \u0000, \u0000...}
+		sb2.append("efg").append(true).append("随便");//通过 return this 实现方法链
+		
+		System.out.println(sb2);
+		
+		StringBuilder string1 = new StringBuilder("a");
+		for(int i = 0; i < 1000; i++) {
+			string1.append(i);
+			if(i%5 == 0) {
+				string1.append("\n")
+			}
+		}
+
+		System.out.println(string1);
+	}
+}

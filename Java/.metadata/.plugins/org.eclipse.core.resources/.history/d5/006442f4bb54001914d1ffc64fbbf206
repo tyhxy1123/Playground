@@ -1,0 +1,9 @@
+server:
+  port: 8080
+  
+person:
+  name: John
+  age: 18
+  cars:
+    - Lamborgini
+    - Masaratti

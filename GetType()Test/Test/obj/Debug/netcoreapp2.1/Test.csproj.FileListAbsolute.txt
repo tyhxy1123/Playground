@@ -1,0 +1,11 @@
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/obj/Debug/netcoreapp2.1/Test.csprojAssemblyReference.cache
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/obj/Debug/netcoreapp2.1/Test.csproj.CoreCompileInputs.cache
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/obj/Debug/netcoreapp2.1/Test.AssemblyInfoInputs.cache
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/obj/Debug/netcoreapp2.1/Test.AssemblyInfo.cs
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/bin/Debug/netcoreapp2.1/Test.deps.json
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/bin/Debug/netcoreapp2.1/Test.runtimeconfig.json
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/bin/Debug/netcoreapp2.1/Test.runtimeconfig.dev.json
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/bin/Debug/netcoreapp2.1/Test.dll
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/bin/Debug/netcoreapp2.1/Test.pdb
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/obj/Debug/netcoreapp2.1/Test.dll
+/Users/xiangyu/Projects/Playground/GetType()Test/Test/obj/Debug/netcoreapp2.1/Test.pdb

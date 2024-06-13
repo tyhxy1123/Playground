@@ -1,0 +1,12 @@
+package de.dresden.springdemo.mvc.model;
+
+@Component
+public class Student {
+	@Autowired
+	private String lastName;
+	@Autowired
+	private String firstName;
+	@Autowired
+	private int age;
+	
+}

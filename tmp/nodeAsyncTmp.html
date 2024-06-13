@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tmp</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>"></script>
+    <script>
+        async function fib(n){
+            if(n == 0) return 0;
+            return n==1 ? n : await fib(n-1) + await fib(n-2)
+        }
+        $(function() {
+            $("button").click(function(){
+                let i = 0;
+                array0=[];
+                n = $("input").val()
+                while(i < n){
+                    array0.push(fib(i))
+                }
+                result = array0[0]
+                console.log(await result)
+            })
+        })
+    </script>
+</head>
+<body>
+    <span><input type="text"><button></button></span>
+</body>
+</html>

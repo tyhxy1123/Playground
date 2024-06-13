@@ -1,0 +1,89 @@
+# Intelligent Cup for Informatiker
+
+## Problem Scenario and Solutions
+
+## Model Design
+
+## Interactive Design
+
+The basic idea of data presentation is to display different variant of data through color.
+
+### Temperature Display
+
+##### Choosing LED
+
+The process of temperature change is displayed through change of colors. Human being has an natural instinctive way of judging temperature. When the temperature is low, the color seems to be more blue. Whereas if the temperature high, the color seems to be more red.
+
+To display the different color properly, we intended to use LED light as our light source. It's energy effective, easy to control luminance through Pulse-width modulation(pwm). On arduino we have possibility to write functions, which manipulate three different color-LEDs to display different color.
+
+As a result of above research the group members had two options:
+
+1. Three color-LEDs with Red, Blue and Green colors bonding together.
+2. One RGB-LED with three pins.
+
+In consideration of bloatedness of whole prototype the group members decided to adopt the one RGB proposal. The one RGB design makes the temperature display slimmer and more concise.
+
+##### Mapping of Temperature and Colors
+
+The basic idea of temperature mapping is to set the RGB-LED to constant luminance and to only adjust the color accordingly.
+
+At first the design group intended to display the ideal temperature as complete green. Degrees lower than ideal would be mixed with blue. At lowest level of temperature is the RGB-LED completely turned to blue. For temperature higher than ideal the LED would be turned into corresponding red.
+
+By the actual implementation the development group found that with different ideal temperature the green color would move from at least 10 degrees up to at most 65 degrees. Whenever 65 or 10 degrees represented by green color will make display of other colors unintuitive and misleading.
+
+At last the group set the LED to a pure thermometer, which only display temperature from 10 to 90 degrees as the color from full blue to full red. In this design the green actually represent for the temperature in the middle.
+
+##### Ideal Temperature Display
+
+After the group turned the LED into the pure thermometer the color display could not fulfill the duty of indicating ideal temperature. To solve this problem the group programed the Arduino to make the RGB-LED slightly twinkle in a soft pace when the ideal temperature of corresponding drink arrives.
+
+### Humidity Sensor Integration
+
+#### Raw Design
+
+Inside the cup there are four nodes providing the functions of two humidity sensors. One near the bottom and another at the top.
+
+In the first place the group members put only two nodes, which means one sensor, inside the cup, only to monitor the presence of drinks.
+
+The original program only monitors the moment when the liquid from presence to unpresence. As soon as the liquid in the cup disappeared, the counter increases by 1.
+
+This raw plan turned out to be insufficient and inaccurate in terms of cup number counting. Because whenever there was water, the counter was possibly increased by one, no matter if the cup is full or not.
+
+#### Final Design
+
+To solve the problem the design has been modified to two seperate sensors. The one at bottom detects the presence of water, the one at top checks if the cup is full. And through program in Arduino the counter increases by 1, once and only after the cup state changes from full to empty.
+
+#### Mode Lock Function
+
+To further increase the accuracy of the counter the developers implemented "Mode Lock" function. The "Mode Lock" function lock the drink mode switch, so lang there's water that remains in the cup.
+
+### Counting Device
+
+#### Separate Display
+
+The counting device was designed to display two different kinds of drinks, one for water and the other for coffee. Yellow LEDs are used to indicate coffee and green LEDs to indicate water.
+
+The first design was to display only chosen drink mode, that means only one line of LEDs would be lighted, the other line would be always dark so long the drink mode remain unchanged.
+
+It is obvious that this design could only display half of the information as it should. When one drink mode was selected, it fails to inform users the cup-number from other drink mode, makes the function unfriendly to users.
+
+After discussion the current mode display function was combined with touch sensor, which will be duscussed in the following touch sensor section.
+
+#### Binary Number Display
+
+Because the amount of pins on the Arduino board is limited. Binary number is applied to indicate the number of cups. There are three digits for each drink variant.
+
+### Touch Sensor Integration
+
+In the primitive thought the touch sensor was to install two buttons by each line of binary numbers. So that users select required drink mode by touching corresponding sensor.
+
+To make the design more slim and clean, only one touch sensor was kept, and the drink mode will be switched into the other by activation of the sensor. By this mean the other touch sensors are no longer necessary.
+
+Apparently the counter needs a function to reset the whole binary numbers to zero. An intuitive way is reset by long touch, which is also the last design. Through sensing of long touch signal by Arduino board the program will reset the count number to zero.
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+/Users/xiangyu/Projects/Playground/CPP/arrayComparison/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/xiangyu/Projects/Playground/CPP/arrayComparison/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xiangyu/Projects/Playground/CPP/arrayComparison/cmake-build-debug/CMakeFiles/arrayComparison.dir

@@ -1,0 +1,91 @@
+package de.tu_dresden.bean;
+
+import java.util.List;
+
+public class Person {
+	private String name;
+	private int age;
+	private List<String> cars;
+	private boolean boss;
+	private Date birthday;
+	
+	private Map<String, Object> map;
+	private List<String> list;
+	
+	private Dog dog;
+
+	
+	
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + ", cars=" + cars + ", boss=" + boss + ", list=" + list
+		        + ", dog=" + dog + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public List<String> getCars() {
+		return cars;
+	}
+
+	public void setCars(List<String> cars) {
+		this.cars = cars;
+	}
+
+	public boolean isBoss() {
+		return boss;
+	}
+
+	public void setBoss(boolean boss) {
+		this.boss = boss;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public Map<String, Object> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<String, Object> map) {
+		this.map = map;
+	}
+
+	public List<String> getList() {
+		return list;
+	}
+
+	public void setList(List<String> list) {
+		this.list = list;
+	}
+
+	public Dog getDog() {
+		return dog;
+	}
+
+	public void setDog(Dog dog) {
+		this.dog = dog;
+	}
+	
+	
+	
+}

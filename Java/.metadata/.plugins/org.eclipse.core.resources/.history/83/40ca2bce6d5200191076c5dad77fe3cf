@@ -1,0 +1,19 @@
+package de.tu_dresden.stringbuilder;
+
+
+/**
+ * String 不可变字符序列
+ * 测试可变字符序列 StringBuilder(线程不安全，效率高), StringBuffer(线程安全，效率低)
+ * @author xiangyu
+ *
+ */
+public class Test02 {
+	
+	public static void main(String[] args) {
+		
+		StringBuilder sb = new StringBuilder("abcdefghijklmnopqrstuvwxyz");
+		sb.delete(3, 5);
+		System.out.println(sb); //包头不包尾index 3 删掉，index 5 保留
+		
+	}
+}

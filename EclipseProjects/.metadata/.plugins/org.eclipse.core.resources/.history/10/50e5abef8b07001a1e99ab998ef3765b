@@ -1,0 +1,29 @@
+package de.dresden.springdemo.mvc.controller;
+
+import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import de.dresden.springdemo.mvc.model.Student;
+
+@Component
+@RequestMapping("/student")
+public class StudentController {
+	
+	@RequestMapping("/showForm")
+	public String showForm(Model model) {
+		model.addAttribute("student", new Student());
+		
+		return "student-form";
+	}
+	
+	
+	@RequestMapping("/processForm")
+	public String processForm(@ModelAttribute("student")Student student) {
+		
+		
+		
+		return "student-conformation";
+	}
+}

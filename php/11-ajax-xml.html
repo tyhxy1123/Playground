@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-ajax-xml</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(() => {
+            $("button").on("click", () => {
+                $.ajax({
+                    type:"get",
+                    url:"11-ajax-xml.php",
+                    success:(xhr)=>{console.log(xhr.responseText)},
+                    error:(xhr)=>{console.log(xhr.status)}
+                })
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button>submit</button>
+    </div>
+</body>
+</html>

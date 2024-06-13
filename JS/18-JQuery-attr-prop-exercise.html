@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <title>18-JQuery-attr-prop-exercise.html</title>
+    <script>
+        $(function (){
+            var src = "https://jjgirls.com/photo/ladyboy-ladyboy/ladyboy-kae/horny-shemale/15.jpg"
+            var srcO = "http://www.baidu.com/img/baidu_resultlogo@2.png"
+            $("button").eq(0).click(function(){
+                var img = $("img")[0]
+                if(img.src==src){
+                    img.src=srcO
+                }
+                else{
+                    img.src=src
+                }
+                // var img = $("img').eq(0)
+                // if(img.getAttribute("src") == src){
+                //     img.setAttribute("src", srcO)
+                // }else{
+                //     img.setAttribute("src", src)
+                // }
+                $("input")[0].value="changed img"
+            })
+            console.log($("input")[1]);
+            console.log($("[name='changePosition']"));
+            $("[name='changePosition']").click(function () {
+                console.log($("div")[0].align);
+                if ($("div")[0].align == "left") {
+                    $("div")[0].align = "center"
+                }
+                else if ($("div")[0].align == "center") {
+                    $("div")[0].align = "right"
+                }
+                else {
+                    $("div")[0].align = "left"
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="text"/>
+<button>change img</button><br/>
+<img src="http://www.baidu.com/img/baidu_resultlogo@2.png" alt="">
+<iframe src="https://www.ashemaletube.com/embed/384767/23695/600/338/" width="600" height="338" frameborder="0"scrolling="no"></iframe>
+<iframe src="https://www.ashemaletube.com/embed/380285/8383/1000/750/" width="1000" height="750" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.ashemaletube.com/embed/485336/63486/1000/563/" width="1000" height="563" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.ashemaletube.com/embed/497709/9464/1000/563/" width="1000" height="563" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.ashemaletube.com/embed/504394/9987/800/450/" width="800" height="450" frameborder="0" scrolling="no"></iframe>
+<input value="change position" name="changePosition" type="button"></input>
+<div align="center">
+    <iframe src="https://www.ashemaletube.com/embed/486691/15139/600/1067/" width="600" height="1067" frameborder="0" scrolling="no"></iframe>
+</div>
+
+</body>
+</html>

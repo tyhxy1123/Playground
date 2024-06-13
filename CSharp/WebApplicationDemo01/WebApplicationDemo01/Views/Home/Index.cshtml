@@ -1,0 +1,51 @@
+@model IndexViewModel
+
+@{
+    //    Layout = "_Layout";
+    ViewBag.Title = "全体学生详情";
+}
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">姓名</th>
+            <th scope="col">邮箱</th>
+            <th scope="col">班级</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var student in Model.AllStudents)
+        {
+            <tr>
+                <td scope="row">@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.ClassName</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<div class="card-deck">
+    @foreach (var student in Model.AllStudents)
+    {
+        <div class="card m-3" style="width: 300px">
+            <div class="card-header text-center">
+                <h3 align="center">@student.Name</h3>
+            </div>
+            <img class="card-img-top" asp-append-version="true" src="~/imgs/02.jpg"/>
+            
+            <div class="card-footer text-center">
+                @* TagHelper功能 *@
+                <a asp-controller="Home" asp-action="Detail" asp-route-id="@student.Id" class="btn btn-primary">查看</a>
+                
+                @* 以往时期.net mvc功能 *@
+                @* @Html.ActionLink("view","detail","Home",new {Id=student.Id}) *@
+                @* <a href="@Url.Action("Detail","Home",new {id=student.Id})" class="btn btn-primary">view</a> *@
+                @* <a>view</a> *@
+                <a href="#" class="btn btn-primary">edit</a>
+                <a href="#" class="btn btn-danger">delete</a>
+            </div>
+        </div>
+    }
+</div>

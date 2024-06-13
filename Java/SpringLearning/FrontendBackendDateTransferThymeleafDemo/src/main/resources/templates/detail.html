@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>student detail</title>
+</head>
+<body>
+<form th:action="moreDetail">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th th:text="${student.id}"></th>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.age}"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<button onclick="location.href='/addStudent'">back</button>
+<!--<h3>Success</h3>-->
+</body>
+</html>

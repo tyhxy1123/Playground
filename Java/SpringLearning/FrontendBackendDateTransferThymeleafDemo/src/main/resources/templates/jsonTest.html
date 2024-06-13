@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JsonTest</title>
+    <script crossorigin="anonymous"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script>
+        $(() => {
+            $('button').on("click", function () {
+                var $input = $('.add > form > input');
+                var $name = $input[0].value;
+                var $age = $input[1].value;
+                var student = {
+                    "name":$name,
+                    "age":$age
+                };
+                $.ajax({
+                    type: "POST",
+                    contentType: 'application/json',
+                    dataType:'json',
+
+                    url:"/jsonTest",
+                    data:JSON.stringify(student),
+                    success: (student)=>{
+                        var student = JSON.parse(student);
+                        var text = "<p>"+student.id+"</p><br>"+
+                            "<p>"+student.name+"</p><br>"+
+                            "<p>"+student.age+"</p>";
+                        $(".display").append(text);
+                    },
+                    error: ()=>{
+                        console.log("error")
+                    }
+                })
+            })
+        });
+
+        // var text = '<table>' +
+        // '<tbody>' +
+        // '<tr>' +
+        // '<th>' + student.id + '</th>' +
+        // '<td>' + student.name + '</td>' +
+        // '<td>' + student.age + '</td>';
+
+    </script>
+</head>
+<body>
+<div class="add">
+    <form>
+        <span>name: </span><input placeholder="name" type="text"/><br>
+        <span>age: </span><input placeholder="age" type="text"/><br>
+    </form>
+    <button>submit</button>
+</div>
+
+<div class="display">
+
+</div>
+</body>
+</html>

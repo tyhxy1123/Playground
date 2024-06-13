@@ -1,0 +1,11 @@
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1/ConsoleApp1
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1/ConsoleApp1.deps.json
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1/ConsoleApp1.runtimeconfig.json
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1/ConsoleApp1.runtimeconfig.dev.json
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1/ConsoleApp1.dll
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/bin/Debug/netcoreapp3.1/ConsoleApp1.pdb
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/obj/Debug/netcoreapp3.1/ConsoleApp1.csprojAssemblyReference.cache
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/obj/Debug/netcoreapp3.1/ConsoleApp1.AssemblyInfoInputs.cache
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/obj/Debug/netcoreapp3.1/ConsoleApp1.AssemblyInfo.cs
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/obj/Debug/netcoreapp3.1/ConsoleApp1.dll
+/Users/xiangyu/Projects/Playground/CSharp/ConsoleApp1/ConsoleApp1/obj/Debug/netcoreapp3.1/ConsoleApp1.pdb

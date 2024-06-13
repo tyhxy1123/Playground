@@ -1,0 +1,17 @@
+package de.dresden.springdemo.mvc.model;
+
+
+public class Student {
+	
+	private String lastName;
+	
+	private String firstName;
+	
+	private int age;
+
+	public Student() {
+		super();
+	}
+	
+	
+}

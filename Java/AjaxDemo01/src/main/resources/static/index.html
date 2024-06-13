@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AjaxExperiment01</title>
+    <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn2").click(function(){
+                console.log("test success")
+            })
+            $("#btn").click(function (){
+                console.log("ajax activated")
+                $.ajax("/a1",function(data){
+                    var html = ""
+                    console.log(data)
+                    data.forEach(function(item){
+                        html += "<tr><td>"+data.id+"</td>"+"<td>"+data.name+"</td>"+"<td>"+data.age+"</td></tr>"
+                    })
+                    $(".inhalt").append(html)
+                })
+            })
+            var $img = $("img")[0]
+            console.log($img.width);
+            $.each($("span"),function(index, value){
+                console.log(index, value);
+            })
+
+            $.ajax("/detail", function(allUsers){
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <div>
+        <table class="table-light">
+            <thead class="col-3"></thead>
+            <tr class="row">
+                <th>id</th>
+                <td>姓名</td>
+                <td>年龄</td>
+            </tr>
+            <tbody class="col-3">
+            <tr class="row gogo">
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <img src="https://i.ebayimg.com/images/g/3hgAAOSwzXJb9H6~/s-l225.jpg"/>
+        <input id="btn" type="button" value="Inhalt Anzeigen" align="center"/>
+        <input id="btn2" type="button" value="test01"/>
+        <span>我是span</span>
+        <span>我是第二个span</span>
+    </div>
+</div>
+
+
+
+
+<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

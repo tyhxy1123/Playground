@@ -1,0 +1,9 @@
+
+person.name=zhangsan
+person.age=18
+person.birthday=11/11/1111
+person.boss=false
+person.map.k1=v1
+person.map.k2=v2
+person.cars=masaratti,lanbourgini
+person.dog.name=wangwang

@@ -1,0 +1,17 @@
+# server:
+#   port: 8089
+
+
+
+# person:
+#   name: John
+#   age: 18
+#   cars:
+#     - Lamborgini
+#     - Masaratti
+#   boss: false
+#   birthday: 11/11/1911
+#   dog:
+#     name: Wangwang
+
+#   map: {k1: v1, k2: v2}
